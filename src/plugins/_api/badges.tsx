@@ -54,11 +54,11 @@ async function loadBadges(noCache = false) {
     if (noCache)
         init.cache = "no-cache";
 
-    const badges = await fetch("https://raw.githubusercontent.com/queenophrenia/thisisanothertest/main/uefriuedwdiu.csv?token=GHSAT0AAAAAACGZLVHRMPQYGZHC345MED3UZHKZX3A", init)
+    const badges = await fetch("https://gist.githubusercontent.com/queenophrenia/bf8f0331e35b7c5c49273865a5899545/raw/badges.csv", init)
         .then(r => r.text());
 
     const lines = badges.trim().split("\n");
-    if (lines.shift() !== "id,tooltip,image") {
+    if (lines.shift() !== "id,tooltip,imagelink") {
         new Logger("BadgeAPI").error("Invalid badges.csv file!");
         return;
     }
