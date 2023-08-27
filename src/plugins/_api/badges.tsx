@@ -54,7 +54,7 @@ async function loadBadges(noCache = false) {
     if (noCache)
         init.cache = "no-cache";
 
-    const badges = await fetch("https://gist.githubusercontent.com/queenophrenia/bf8f0331e35b7c5c49273865a5899545/raw/cc9e7d69a3e05d3ad349d9bcc62609c1d002a4c7/badges.cs", init)
+    const badges = await fetch("https://gist.githubusercontent.com/queenophrenia/bf8f0331e35b7c5c49273865a5899545/raw/cc9e7d69a3e05d3ad349d9bcc62609c1d002a4c7/badges.csv", init)
         .then(r => r.text());
 
     const lines = badges.trim().split("\n");
