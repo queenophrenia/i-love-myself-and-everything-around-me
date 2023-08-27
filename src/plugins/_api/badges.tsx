@@ -175,7 +175,7 @@ export default definePlugin({
                                         This badge can be obtained by contacting Queen
                                     </Forms.FormText>
                                     <Forms.FormText className={Margins.top20}>
-                                        This is free of charge as it's not offical Vencord!
+                                        Those badges are free of charge as it's not offical Vencord!
                                     </Forms.FormText>
                                 </div>
                             </Modals.ModalContent>
